@@ -6,8 +6,8 @@ int main(void){
 
     srand(time(NULL));
 
-    int tam = 10, posMenor = 0, menor = 0;
-    int v[tam], v2[tam];
+    int tam = 10,  menor = 0;
+    int v[tam];
     // Preenchendo o vetor
 
     for(int i = 0;i<tam;i++){
@@ -17,14 +17,14 @@ int main(void){
     // Ordenando os elementos
 
     for(int i = 0;i<tam;i++){
-        for(int j = 0;j<tam;j++){
-                menor = v[posMenor];
-            if(v[i] < menor){
-                v2[i] = menor;
+        for(int j = i;j<tam;j++){
+              if(v[i] > v[j]){
                 menor = v[i];
-                posMenor = i;
-            }
+                v[i]  = v[j];
+                v[j] = menor;
+              }
         }
+        
     }
 
     // Imprimindo os vetores
@@ -35,9 +35,5 @@ int main(void){
         printf("%i ",v[i]);
     }
 
-    printf("\n\nVetor 2\n\n");
-
-    for(int i = 0;i<tam;i++){
-        printf("%i ",v2[i]);
-    }
+   
 }

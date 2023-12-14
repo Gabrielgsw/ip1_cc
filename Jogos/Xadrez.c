@@ -8,7 +8,7 @@ int main(void){
 
     char tabuleiro[8][8];
     char cavalo = 'C', pedras = 'P';
-    int c_l,c_c;
+    int c_l,c_c,jogadas = 0;
 
     // Gerando o tabuleiro com '_'
     for(int i = 0;i<8;i++){
@@ -44,12 +44,27 @@ int main(void){
         }
     }
 
-    for(int i = 0;i<8;i++){
-        for(int j = 0;j<8;j++){
-            printf("%c ",tabuleiro[i][j]); 
+
+
+
+    do
+    {
+        
+        // Imprimindo o tabuleiro
+        for(int i = 0;i<8;i++){
+            for(int j = 0;j<8;j++){
+                printf("%c ",tabuleiro[i][j]); 
+            }
+            printf("\n");
         }
         printf("\n");
-    }
+        // Implementando movimento do cavalo
+        char movimento;
+        printf("")
+
+
+    } while (1);
+    
 
 
 }
